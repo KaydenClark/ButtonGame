@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+    font-size: 30px;
+    background-color: grey;
+}
+#dub{
+    display: none;
+}
+#trip{
+    display: none;
+}
+#quad{
+    display: none;
+}
+#color{
+    display: none;
+}
+#img{
+    width: 50px;
+    height: auto;
+    margin: 15vw;
+    display: none;
+}
