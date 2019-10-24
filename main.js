@@ -12,9 +12,11 @@ const b = getId("trip")
 const c = getId("quad")
 const d = getId("getfast")
 const e = getId("color")
-let scores = [a, b, c, d, e]
+const propic = getId("img");
+let scores = [a, b, c, d, e, propic]
 
-const countbutton = getId("img");
+
+console.log(propic)
 
 const colorrandint = () => {
     let colors = 
@@ -26,10 +28,10 @@ const colorrandint = () => {
 console.log("check 2")
 
 const moveobject = () => {
-    countbutton.style.display = "block"
+    propic.style.display = "block"
     let x = Math.floor(Math.random() * 75)
     let y = Math.floor(Math.random() * 75)
-    countbutton.style.margin = `${y}vh ${x}vw`;
+    propic.style.margin = `${y}vh ${x}vw`;
 };
 
 const copy = (moveobject) => {
