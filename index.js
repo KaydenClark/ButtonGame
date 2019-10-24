@@ -1,3 +1,5 @@
+document.designMode = 'off'
+
 var clicks = 0;
 var score = clicks;
 console.log("check 1")
@@ -8,13 +10,11 @@ const d = document.getElementById("color")
 
 const countbutton = document.getElementById("img");
 
-const bgcolorchange = () => {
-    Math.floor(Math.random() * 2);
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    let color = "rgb(" + r + "," + g + "," + b + ")";
-    document.body.style.backgroundColor = color;
+const colorrandint = () => {
+    let colors = 
+    [`#FF9D00`, `#CF32FF`, `#00FFF2`, `#FF0010`, `#37FF00`, `#1BE7FF`, `#F9D800`, `#6EEB83`, `#FF5714`, `#FF82A9`, `#DE369D`, `#3185FC`, `#E84855`, `#0D21A1`, `#EA3788`, `#F26419`, `#FFFC31`, `#3EC300`, `#337CA0`, `#FF1D15`, `#E3170A`, `#0CCA4A`, `#0C8346`, `#7768AE`, `#9D75CB`]
+    let randcolor = colors[(Math.floor(Math.random() * (colors.length)))]
+    document.body.style.backgroundColor = randcolor
 };
 
 console.log("check 2")
@@ -54,13 +54,14 @@ const press1 = () => {
         c.style.display ="block";
         clicks += 1
     }
-    if (clicks >= 200) {
+    if (clicks >= 150) {
         c.style.display ="none";
         d.style.display ="block";
-        bgcolorchange()
+        colorrandint()
         moveobject()
         copy()
     }
+    
     
 };
 
