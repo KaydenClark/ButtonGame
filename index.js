@@ -1,14 +1,20 @@
 document.designMode = 'off'
 
 var clicks = 0;
-var score = clicks;
 console.log("check 1")
-const a = document.getElementById("dub")
-const b = document.getElementById("trip")
-const c = document.getElementById("quad")
-const d = document.getElementById("color")
+const getId = (input) => {
+    let abrev = document.getElementById(input)
+    return abrev
+}
+console.log("pass")
+const a = getId("dub")
+const b = getId("trip")
+const c = getId("quad")
+const d = getId("getfast")
+const e = getId("color")
+let scores = [a, b, c, d, e]
 
-const countbutton = document.getElementById("img");
+const countbutton = getId("img");
 
 const colorrandint = () => {
     let colors = 
@@ -39,39 +45,43 @@ const copy = (moveobject) => {
 
 const press1 = () => {
     clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
+    getId("clicks").innerHTML = clicks;
     if (clicks >= 10) {
-        a.style.display = "block";
-        clicks += 1
+        a.style.display ="block";
+        clicks++
     }
     if (clicks >=50) {
         a.style.display ="none";
-        b.style.display = "block";
-        clicks +=1
+        b.style.display ="block";
+        clicks++
     }
     if (clicks >= 100) {
         b.style.display ="none";
         c.style.display ="block";
-        clicks += 1
+        clicks++
     }
-    if (clicks >= 150) {
+    if (clicks >= 150){
         c.style.display ="none";
         d.style.display ="block";
+        clicks++
+    }
+    if (clicks >= 300) {
+        d.style.display ="none"
+        e.style.display ="block"
         colorrandint()
         moveobject()
         copy()
     }
+    if(clicks >= 500){}
     
     
 };
 
-function reset() {
+let reset= () => {
     clicks = 0;
-    document.getElementById("clicks").innerHTML = clicks;
+    getId("clicks").innerHTML = clicks;
     document.body.style.backgroundColor = "grey";
-    a.style.display = "none"
-    b.style.display = "none"
-    c.style.display = "none"
-    d.style.display = "none"
+    for(i= 0; i < scores.length; i++){
+        scores[i].style.display ="none"
+    }
 };
-
