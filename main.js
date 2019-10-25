@@ -32,7 +32,7 @@ const colorrandint = () => {
     let colors = 
     [`#FF9D00`, `#CF32FF`, `#00FFF2`, `#FF0010`, `#37FF00`, `#1BE7FF`, `#F9D800`, `#6EEB83`, `#FF5714`, `#FF82A9`, `#DE369D`, `#3185FC`, `#E84855`, `#0D21A1`, `#EA3788`, `#F26419`, `#FFFC31`, `#3EC300`, `#337CA0`, `#FF1D15`, `#E3170A`, `#0CCA4A`, `#0C8346`, `#7768AE`, `#9D75CB`]
     let randcolor = colors[(Math.floor(Math.random() * (colors.length)))]
-    bgColor = randcolor
+    document.body.style.backgroundColor = randcolor
 };
 
 console.log("check 2")
@@ -66,7 +66,7 @@ const press1 = () => {
         d.style.display ="block";
         clicks++
     }
-    if (clicks >= 1) {
+    if (clicks >= 300) {
         d.style.display ="none"
         e.style.display ="block"
         if (clicks <= 5) {
@@ -74,7 +74,7 @@ const press1 = () => {
             moveobject(propic, 75)
         }
     }
-    if(clicks >= 5){
+    if(clicks >= 500){
         e.style.display= "none"
         propic.style.display= "none"
         g.style.display= "block"
