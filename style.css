@@ -3,6 +3,27 @@ body{
     font-size: 30px;
     background-color: grey;
 }
+#shipSlow{
+    display: none;
+}
+#shipFast{
+    display: none;
+}
+#ex1{
+    display: none;
+}
+#ex2{
+    display: none;
+}
+#ex3{
+    display: none;
+}
+#ex4{
+    display: none;
+}
+#ex5{
+    display: none;
+}
 #dub{
     display: none;
 }
@@ -15,12 +36,15 @@ body{
 #color{
     display: none;
 }
+#getfast{
+    display: none;
+}
+#god{
+    display: none
+}
 #img{
     width: 50px;
     height: auto;
     margin: 15vw;
-    display: none;
-}
-#getfast{
     display: none;
 }
